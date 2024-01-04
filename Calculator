@@ -1,0 +1,63 @@
+#include 
+<stdio.h> 
+int main() 
+{ char operation; 
+ int c,d; 
+ float solution; 
+ printf (" Choose an operator(+, -, *, /) to perform the operation in C 
+Calculator \n "); 
+ scanf ("%c", &operation); 
+ if (operation == '*' ) 
+ { 
+ printf (" You have selected: Multiplication"); 
+ } 
+ else if (operation == '/') 
+ { 
+ printf (" You have selected: Division"); 
+ } 
+ 
+ else if (operation == '-') 
+ { 
+ printf (" You have selected: Subtraction"); 
+ } 
+ else if (operation == '+') 
+ { 
+ printf (" You have selected: Addition"); 
+ } 
+ printf (" \n Enter the first number: "); 
+ scanf(" %d", &c); 
+ printf (" Enter the second number: "); 
+ scanf (" %d", &d); 
+ 
+ switch(operation) 
+ { 
+ case '+': 
+ solution = c+d; 
+ printf (" Addition of %d and %d is: %.2f", c, d, solution); 
+ break; 
+ 
+ case '-': 
+ solution = c-d;
+ printf (" Subtraction of %d and %d is: %.2f", c, d, solution); 
+ break; 
+ 
+ case '*': 
+ solution = c*d; 
+ printf (" Multiplication of %d and %d is: %.2f", c, d,solution); 
+ break; 
+ 
+ case '/': 
+ if (d == 0) 
+ { 
+ printf (" \n Divisor cannot be zero. Please enter another 
+value "); 
+ scanf ("%d", &d); 
+ } 
+ solution = c/d; 
+ printf (" Division of %d and %d is: %.2f", c, d, solution); 
+ break; 
+ default: 
+ printf (" Something is wrong!! Please check the options "); 
+ } 
+ return 0; 
+}
